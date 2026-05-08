@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FEF9F0;   /* тёплый светлый фон */
+    color: #2E241F;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* типографика */
+h1, h2, h3, .logo-text, .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #5A3E2B;
+    position: relative;
+    display: inline-block;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #D9A13B;
+    border-radius: 4px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-light {
+    background-color: #FFFBF5;
+}
+
+.section-beige {
+    background-color: #FDF5E6;
+}
+
+/* шапка */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: #D9A13B;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #5A3E2B;
+}
+
+.logo-small {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #8B6B4A;
+    margin-left: 6px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3E2A1F;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #D9A13B;
+}
+
+/* герой */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px 0 20px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #3E2A1F;
+}
+
+.hero-accent {
+    color: #C17B2E;
+    border-bottom: 2px solid #E9BC7D;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: #5F4A38;
+    max-width: 500px;
+    margin-bottom: 32px;
+}
+
+.btn {
+    display: inline-block;
+    background: #D9A13B;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #D9A13B;
+    color: #5A3E2B;
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background: #D9A13B;
+    color: white;
+}
+
+.btn:hover {
+    background: #BF8532;
+    transform: translateY(-2px);
+}
+
+.hero-gallery {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 28px;
+    object-fit: cover;
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.02);
+}
+
+/* меню сетка */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    transition: all 0.25s;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 35px -12px rgba(0,0,0,0.15);
+}
+
+.menu-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #EDDDC8;
+}
+
+.menu-info {
+    padding: 20px;
+}
+
+.menu-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-price {
+    color: #D9A13B;
+    font-weight: 700;
+}
+
+.menu-desc {
+    color: #6C5542;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.badge {
+    background: #F4E5D3;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #936E42;
+    display: inline-block;
+}
+
+/* галерея фото кафе */
+.gallery-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* контакты + карта (стилизация) */
+.contact-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.contact-info {
+    flex: 1;
+    background: white;
+    padding: 32px;
+    border-radius: 32px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+}
+
+.contact-info i {
+    color: #D9A13B;
+    width: 32px;
+    font-size: 1.3rem;
+    margin-right: 12px;
+}
+
+.contact-info p {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.map-placeholder {
+    flex: 1;
+    background: #EADBCB;
+    border-radius: 32px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.map-placeholder i {
+    font-size: 48px;
+    color: #B47C44;
+    margin-bottom: 16px;
+}
+
+.footer {
+    background: #2E241F;
+    color: #E5D9CF;
+    text-align: center;
+    padding: 32px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .hero {
+        flex-direction: column;
+    }
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    .section {
+        padding: 56px 0;
+    }
+    .container {
+        padding: 0 20px;
+    }
+}
